@@ -1,4 +1,4 @@
-user can create a single bank account  with an initial deposit amount 
+user can create a single bank account  with an initial deposit amount -> Done
 Allow user to make withdrawls,deposits and see the balance of the account 
 
 create bankAccount constructor and a prototype that includes methods for deposit and withdrawal and ohter properties 

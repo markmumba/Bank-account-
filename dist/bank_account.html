@@ -18,28 +18,33 @@
     <div class="heading">
         <h1 class="display-1">Chase Bank </h1>
     </div>
-    <br><br><br>
+    <br><br>
     <div class="container-fluid">
         <div class="row">
             <div class="col-4">
-                <input class="form-control form-control-lg" type="text" placeholder="Name" aria-label=".form-control-lg example">
+                <input class=" name form-control form-control-md" type="text" placeholder="Name" aria-label=".form-control-lg example">
                     <br><br>
-                <input class="form-control form-control-lg" type="text" placeholder="Initial amount" aria-label="default input example">
+                <input class=" money form-control form-control-md" type="text" placeholder="Initial amount" aria-label="default input example">
                <br><br>
-               <button type="button" class="btn btn-primary btn-lg">Create account</button>
-               <br><br>
-               <h2>Current Balance</h2>
+               <button type="button" class=" add-user btn btn-primary btn-md">Create account</button>
             </div>
             <div class="col-2"></div>
             <div class="col-4">
-                <input class="form-control form-control-lg" type="text" placeholder="Deposit Amount" aria-label=".form-control-lg example">
+                <h2 class="account-name"></h2>
+                <input class=" deposit form-control form-control-md" type="text" placeholder="Deposit Amount" aria-label=".form-control-lg example">
                     <br><br>
-                <input class="form-control form-control-lg" type="text" placeholder="Withdraw account " aria-label="default input example">
+                <input class=" withdraw form-control form-control-md" type="text" placeholder="Withdraw account " aria-label="default input example">
+                <br>
+                <div class="error-message"></div>
+               
+                <button type="button" class="make-change btn btn-primary btn-md">Make transaction</button>
                 <br><br>
-                <button type="button" class="btn btn-primary btn-lg">Make transaction</button>
+                <h2>Current Balance</h2>
+                <p class="current-balance"></p>
             </div>
         </div>
     </div>
+ 
 
     <script src="/bank_account.1c974c2f.js"></script>
 <script src="/bank_account.7b7936f9.js"></script></body>

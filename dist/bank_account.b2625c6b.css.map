@@ -1,1 +1,1 @@
-{"mappings":"AAAA;;;;AAGA","sources":["css/style.css"],"sourcesContent":["body{\n    font-family: 'Epilogue', sans-serif;\n}\n.heading {\n    text-align: center\n}\n"],"names":[],"version":3,"file":"bank_account.b2625c6b.css.map","sourceRoot":"/__parcel_source_root/"}
+{"mappings":"AAAA;;;;AAGA","sources":["css/style.css"],"sourcesContent":["body{\n    font-family: 'Epilogue', sans-serif;\n}\n.heading {\n    text-align: center;\n}\n"],"names":[],"version":3,"file":"bank_account.b2625c6b.css.map","sourceRoot":"/__parcel_source_root/"}
