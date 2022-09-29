@@ -16,33 +16,41 @@ let errormessage = document.querySelector('.error-message');
 let userData = {};
 
 
+
+
+class User {
+    constructor(name, amount) {
+        this.name = name;
+        this.amount = amount;
+    }
+}
+
+
+
 // Create a new account and adding the user information to the screen 
 addUser.addEventListener('click', function (e) {
     e.preventDefault();
     getUser();
-    displayAccount();
+   
 
 });
 
 function getUser() {
-    userData[name.value] = money.value;
-    name.value = '';
-    money.value = '';
-    console.log(userData);
-
-}
-
-function displayAccount() {
     let account = '';
     let balance = '';
 
-    for (const key in userData) {
-        account += `${key}'s Account `;
-        balance += userData[key];
-    }
+    let newUser = new User(name.value,money.value);
+
+    account += `${newUser.name}'s Account `;
+    balance += newUser.amount;
+
+    name.value = '';
+    money.value = '';
+
     currentBalance.innerHTML = balance;
-    accountName.innerHTML = account;
+    accountName.innerHTML = account;  
 }
+
 
 
 // Making changes to the accout such as deposting withdrawing 
