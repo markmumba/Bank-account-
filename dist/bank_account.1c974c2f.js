@@ -7,35 +7,13 @@ let deposit = document.querySelector(".deposit");
 let withdraw = document.querySelector(".withdraw");
 let makechange = document.querySelector(".make-change");
 let errormessage = document.querySelector(".error-message");
-let userData = {};
 class User {
     constructor(name, amount){
         this.name = name;
         this.amount = amount;
     }
 }
-// Create a new account and adding the user information to the screen 
-addUser.addEventListener("click", function(e) {
-    e.preventDefault();
-    getUser();
-});
-function getUser() {
-    let account = "";
-    let balance = "";
-    let newUser = new User(name.value, money.value);
-    account += `${newUser.name}'s Account `;
-    balance += newUser.amount;
-    name.value = "";
-    money.value = "";
-    currentBalance.innerHTML = balance;
-    accountName.innerHTML = account;
-}
-// Making changes to the accout such as deposting withdrawing 
-makechange.addEventListener("click", function(e) {
-    e.preventDefault();
-    transaction();
-});
-function transaction() {
+User.prototype.transaction = function() {
     if (deposit.value && withdraw.value) {
         let message = "";
         message += `   <div class="alert alert-danger" role="alert">
@@ -57,6 +35,26 @@ function transaction() {
         console.log(total1);
         errormessage.style.display = "none";
     }
+};
+addUser.addEventListener("click", function(e) {
+    e.preventDefault();
+    getUser();
+});
+makechange.addEventListener("click", function(e) {
+    e.preventDefault();
+    let newUser = new User(name.value, money.value);
+    newUser.transaction();
+});
+function getUser() {
+    let account = "";
+    let balance = "";
+    let newUser = new User(name.value, money.value);
+    account += `${newUser.name}'s Account `;
+    balance += newUser.amount;
+    name.value = "";
+    money.value = "";
+    currentBalance.innerHTML = balance;
+    accountName.innerHTML = account;
 }
 
 //# sourceMappingURL=bank_account.1c974c2f.js.map
