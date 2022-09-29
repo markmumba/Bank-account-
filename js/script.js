@@ -16,14 +16,29 @@ let errormessage = document.querySelector('.error-message');
 
 
 
-
-
 class User {
     constructor(name, amount) {
         this.name = name;
         this.amount = amount;
     }
 }
+
+
+User.prototype.createAccount = function() {
+    let account = '';
+    let balance = '';
+
+    account += `${this.name}'s Account `;
+    balance += this.amount;
+
+    name.value = '';
+    money.value = '';
+
+    currentBalance.innerHTML = balance;
+    accountName.innerHTML = account;
+
+}
+
 
 User.prototype.transaction = function () {
 
@@ -57,33 +72,20 @@ User.prototype.transaction = function () {
 
 
 
-
 addUser.addEventListener('click', function (e) {
     e.preventDefault();
-    getUser();
+    let newUser = new User(name.value, money.value);
+    newUser.createAccount();
 });
 
 makechange.addEventListener('click', function (e) {
-    e.preventDefault();
+    e.preventDefault();         
     let newUser = new User(name.value, money.value);
     newUser.transaction();
 
 });
 
-function getUser() {
-    let account = '';
-    let balance = '';
 
-    let newUser = new User(name.value, money.value);
-    account += `${newUser.name}'s Account `;
-    balance += newUser.amount;
-
-    name.value = '';
-    money.value = '';
-
-    currentBalance.innerHTML = balance;
-    accountName.innerHTML = account;
-}
 
 
 

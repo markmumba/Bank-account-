@@ -13,6 +13,16 @@ class User {
         this.amount = amount;
     }
 }
+User.prototype.createAccount = function() {
+    let account = "";
+    let balance = "";
+    account += `${this.name}'s Account `;
+    balance += this.amount;
+    name.value = "";
+    money.value = "";
+    currentBalance.innerHTML = balance;
+    accountName.innerHTML = account;
+};
 User.prototype.transaction = function() {
     if (deposit.value && withdraw.value) {
         let message = "";
@@ -38,23 +48,13 @@ User.prototype.transaction = function() {
 };
 addUser.addEventListener("click", function(e) {
     e.preventDefault();
-    getUser();
+    let newUser = new User(name.value, money.value);
+    newUser.createAccount();
 });
 makechange.addEventListener("click", function(e) {
     e.preventDefault();
     let newUser = new User(name.value, money.value);
     newUser.transaction();
 });
-function getUser() {
-    let account = "";
-    let balance = "";
-    let newUser = new User(name.value, money.value);
-    account += `${newUser.name}'s Account `;
-    balance += newUser.amount;
-    name.value = "";
-    money.value = "";
-    currentBalance.innerHTML = balance;
-    accountName.innerHTML = account;
-}
 
 //# sourceMappingURL=bank_account.1c974c2f.js.map
